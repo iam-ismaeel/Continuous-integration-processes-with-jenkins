@@ -20,12 +20,7 @@
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>3.4.0</version>
-</dependency>
- 
+
   
     <dependency>
       <groupId>junit</groupId>
@@ -49,8 +44,12 @@
     </configuration>
       </plugin>
         <plugin>
-         <artifactId>maven-war-plugin</artifactId>
-          <version>3.0.0</version>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+         <version>3.4.0</version>
+          <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
